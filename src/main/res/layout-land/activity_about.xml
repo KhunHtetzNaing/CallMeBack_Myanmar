@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="10dp"
+    tools:context="com.htetznaing.callmeback.About">
+
+    <android.support.design.widget.FloatingActionButton
+        android:onClick="sendEmail"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:backgroundTint="#009688"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_dialog_email"/>
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="ca-app-pub-4173348573252986/1294902745">
+    </com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@id/iv1"
+        android:layout_above="@id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/aboutColor"
+                android:text="App Name and Info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="App Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Version"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="1.0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/aboutColor"
+                android:text="Developed By"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:text="Khun Htetz Naing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:text="Release Date"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="3.10.2017"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/aboutColor"
+                android:text="Contact Me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Facebook"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:autoLink="all"
+                android:text="https://www.fb.com/KHtetzNaing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Email"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:autoLink="email"
+                android:text="khunhtetznaing@gmail.com"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
